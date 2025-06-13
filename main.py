@@ -25,13 +25,13 @@ class InstagramFinder:
         """Initialize the main components of the Instagram Finder"""
         
         # Set default API keys if not provided
-        self.rapidapi_key = rapidapi_key or os.getenv("RAPIDAPI_KEY", "d42cd50256mshf486740ae582110p1946afjsn46b844e85640")
+        self.rapidapi_key = rapidapi_key or os.getenv("RAPIDAPI_KEY", "Your API Key")
         self.brightdata_key = brightdata_key  # This is now optional since we're not using the API
-        self.gemini_api_key = gemini_api_key or os.getenv("GEMINI_API_KEY", "AIzaSyA8-o0dWnYCGvQ9X7Nu1PFv9kpHe2ISeHg")
+        self.gemini_api_key = gemini_api_key or os.getenv("GEMINI_API_KEY", "Your Gemini Key")
         
         # Print proxy configuration being used
         print(f"Using BrightData SERP proxy: {os.getenv('SERP_HOST', 'brd.superproxy.io')}:{os.getenv('SERP_PORT', '33335')}")
-        print(f"Using SERP proxy user: {os.getenv('SERP_USER', 'brd-customer-hl_4d770a19-zone-serp_api1')}")
+        print(f"Using SERP proxy user: {os.getenv('SERP_USER', 'SERP_USER_ID')}")
         
         # Initialize each component
         self.sheets_handler = SheetsHandler(credentials_file)
@@ -196,8 +196,8 @@ def main():
         print("dotenv package not installed, using default environment variables")
     
     # Define API keys - load from environment variables
-    rapidapi_key = os.getenv("RAPIDAPI_KEY", "d42cd50256mshf486740ae582110p1946afjsn46b844e85640")
-    gemini_api_key = os.getenv("GEMINI_API_KEY", "AIzaSyA8-o0dWnYCGvQ9X7Nu1PFv9kpHe2ISeHg")
+    rapidapi_key = os.getenv("RAPIDAPI_KEY", "YOUR RAPIDAPI KEY")
+    gemini_api_key = os.getenv("GEMINI_API_KEY", "YOUR GEMINI KEY")
     
     # Initialize the finder with API keys
     finder = InstagramFinder(
@@ -212,7 +212,7 @@ def main():
     RESULTS_WORKSHEET = "Search Results"
     
     # Try to open the specific spreadsheet by URL from environment variable or default
-    sheet_url = os.getenv("SHEET_URL", "https://docs.google.com/spreadsheets/d/1DWWasUwHx4gn-YKzIAWlr922jAEKY59oS8uUN_4zH2I/edit?usp=sharing")
+    sheet_url = os.getenv("SHEET_URL", "https://docs.google.com/spreadsheets/d/1DWWasUwHx4gn-YKzIAW4zH2I/edit?usp=sharing")
     
     try:
         sheet, sheet_title = finder.sheets_handler.open_sheet_by_url(sheet_url)
