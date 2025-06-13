@@ -27,14 +27,23 @@ sheets_monitor.py: Watches the Google Sheet for changes and triggers updates.
 
 
 IG-Finder-main/
+
 │
+
 ├── InstagramDataExtractor.py   # Core logic to extract Instagram profile data
+
 ├── ProfileMatcher.py           # Logic to match and score profiles based on metadata
+
 ├── main.py                     # Entrypoint to run the workflow
+
 ├── sheets_handler.py           # Google Sheets API utilities (read/write)
+
 ├── sheets_monitor.py           # Logic to watch input sheet and trigger processes
+
 ├── credentials.json            # Google Sheets API credentials (not to be shared)
+
 ├── requirements.txt            # List of dependencies
+
 └── .gitignore                  # Git ignore rules
 
 
