@@ -1,0 +1,10 @@
+gspread
+oauth2client
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-generativeai
+requests
+bs4
+flask
+apscheduler
